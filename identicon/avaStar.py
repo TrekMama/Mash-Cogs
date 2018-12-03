@@ -31,11 +31,11 @@ https://github.com/shnjp/identicon
 https://github.com/Canule/identicon
 """
 
-__author__ = "Mash"
+__author__ = "Mama"
 __version__ = "0.0.1"
 #__all__ = ['render_identicon', 'IdenticonRendererBase']
 
-DIR_DATA = "data/identicon/"
+DIR_DATA = "data/avaStar/"
 
 class Matrix2D(list):
     """Matrix for Patch rotation"""
@@ -123,7 +123,7 @@ class IdenticonRendererBase(object):
     
     def render(self, size):
         """
-        render identicon to PIL.Image
+        render avaStar to PIL.Image
         
         @param size identicon patchsize. (image size is 3 * [size])
         @return PIL.Image
@@ -297,5 +297,5 @@ def setup(bot):
     if pil_available is False:
         raise RuntimeError("You don't have Pillow installed, run\n```pip3 install pillow```And try again")
         return    
-    bot.add_cog(Identicon(bot))
+    bot.add_cog(avaStar(bot))
         
